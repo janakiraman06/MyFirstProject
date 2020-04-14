@@ -23,4 +23,11 @@ public class VegController {
     public @ResponseBody Iterable<Vegetables> showVegetables(){
         return vegManager.showVegetables();
     }
+
+    //@RequestMapping(path= "/updatePrice", method = RequestMethod.PUT, consumes = MediaType.ALL_VALUE, produces =MediaType.ALL_VALUE)
+    @RequestMapping(path= "/updatePrice/{a}/{b}", method = RequestMethod.PUT)
+    public @ResponseBody String updatePrice(@PathVariable(name="a") int code, @PathVariable(name="b") float price){
+        String s= vegManager.updatePrice(code,price);
+        return(s);
+    }
 }
