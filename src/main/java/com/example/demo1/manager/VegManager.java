@@ -4,11 +4,13 @@ import com.example.demo1.entity.Vegetables;
 import com.example.demo1.repository.VegRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.boot.autoconfigure.jdbc.*;
 
 /**
  * Created by Janak on 11-04-2020.
  */
 @Service
+
 public class VegManager {
     //insert data
     @Autowired
